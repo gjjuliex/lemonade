@@ -25,7 +25,11 @@ namespace LemonadeStand
             ice = ice - 1;
             sugar = sugar - 1;
             cups = cups - 2;
+            return budget;
+
         }
+
+       
 
 
 
