@@ -8,5 +8,26 @@ namespace LemonadeStand
 {
     class Weather
     {
+        public int weatherNumber;
+
+
+
+
+        public Weather()
+        {
+
+
+        }
+
+
+        public int GrabWeather()
+        {
+            Random random = new random
+
+
+
+        }
+
     }
+
 }
