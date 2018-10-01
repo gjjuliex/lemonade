@@ -25,7 +25,7 @@ namespace LemonadeStand
             switch (temperature)
             {
                 case 1:
-                    this.temperature = rand.Next(51, 60);
+                    this.temperature = rand.Next(50, 60);
                     break;
                 case 2:
                     this.temperature = rand.Next(61, 70);
@@ -34,7 +34,7 @@ namespace LemonadeStand
                     this.temperature = rand.Next(71, 95);
                     break;
                 case 4:
-                    this.temperature = rand.Next(96, 110);           
+                    this.temperature = rand.Next(96, 111);           
             }
             return temperature;
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Inventory
+    public class Inventory
     {
         public int lemon;
         public int ice;
@@ -27,20 +27,14 @@ namespace LemonadeStand
             ice = ice - 2;
             sugar = sugar - 1;
             cups = cups - 1;
-            return leftove;
+            return SubtractInventory;
 
-        }
-
-
-        public void ShowMoney()
-        {
-            Console.WriteLine("Money leftover:{0}", leftoverBudget);
         }
 
   
         public void ShowInventory()
         {
-            Console.WriteLine("You have {0} lemons, {1} cups, {2} cups of sugar, {3} bags of ice leftover!", lemons, cups, sugar, ice);
+            Console.WriteLine("You have {0} lemons, {1} cups, {2} cups of sugar, {3} bags of ice!", lemons, cups, sugar, ice);
         }
 
 
