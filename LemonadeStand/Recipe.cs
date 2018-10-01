@@ -91,7 +91,7 @@ namespace LemonadeStand
         
         public bool CheckIce()
         {
-            if (player.inventory.ice[0].Count < ice)
+            if (Player.inventory.ice[0].Count < ice)
             {
                 Console.WriteLine("Uh oh, you don't have enough ice!");
                 PickIce();
