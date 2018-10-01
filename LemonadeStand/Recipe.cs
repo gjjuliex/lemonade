@@ -44,6 +44,12 @@ namespace LemonadeStand
             }
 
         }
+
+        private void Store()
+        {
+          
+        }
+
         public int PickLemons()
         {
             Console.WriteLine("How many lemons does your recipe call for?");

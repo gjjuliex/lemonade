@@ -12,6 +12,7 @@ namespace LemonadeStand
         public int ice;
         public int sugar;
         public int cups;
+        public double money = 20;
        
      
    
@@ -20,21 +21,15 @@ namespace LemonadeStand
         {
 
         }
-
-       /* public void SubtractInventory()
-        {
-            lemon = lemon - 2;
-            ice = ice - 2;
-            sugar = sugar - 1;
-            cups = cups - 1;
-            return SubtractInventory;
-
-        } */
-
   
         public void ShowInventory()
         {
-            Console.WriteLine("You have {0} lemons, {1} cups, {2} cups of sugar, {3} bags of ice!", lemons, cups, sugar, ice);
+            Console.WriteLine("You have {0} lemons, {1} cups, {2} cups of sugar, {3} bags of ice!", lemon, cups, sugar, ice);
+
+        }
+        public void MoneyBalance()
+        {
+            Console.WriteLine("Your balance is {0}", money);
         }
 
 

@@ -12,7 +12,7 @@ namespace LemonadeStand
         public int numberIce;
         public int numberSugar;
         public int numberCups;
-        public double price;
+        public int price;
         public double money;
         public double moneySpent;
         public double earnings;
@@ -44,10 +44,10 @@ namespace LemonadeStand
             switch (yesOrNo)
             {
                 case "Yes":
-                    inventory.lemons = inventory.lemons + numberLemons;
+                    inventory.lemon = inventory.lemon + numberLemons;
                     inventory.money = inventory.money - (numberLemons * .25);
                     Console.WriteLine("You have purchased {0} lemons", numberLemons);
-                    inventory.ShowCash();
+                    inventory.MoneyBalance();
                     break;
                 case "No":
                     BuyLemons();
@@ -78,10 +78,10 @@ namespace LemonadeStand
             switch (yesOrNo)
             {
                 case "Yes":
-                    inventory.Sguar = inventory.Sugar + numberSguar;
+                    inventory.sugar = inventory.sugar + numberSugar;
                     inventory.money = inventory.money - (numberSugar * .2);
                     Console.WriteLine("You have purchased {0} cups of sugar", numberSugar);
-                    inventory.ShowCash();
+                    inventory.MoneyBalance();
                     break;
                 case "No":
                     BuySugar();
@@ -112,10 +112,10 @@ namespace LemonadeStand
             switch (yesOrNo)
             {
                 case "Yes":
-                    inventory.Ice = inventory.Ice + numberIce;
+                    inventory.ice = inventory.ice + numberIce;
                     inventory.money = inventory.money - (numberLemons * .2);
                     Console.WriteLine("You have purchased {0} bags of ice", numberIce);
-                    inventory.ShowCash();
+                    inventory.MoneyBalance();
                     break;
                 case "No":
                     BuyIce();
@@ -145,10 +145,10 @@ namespace LemonadeStand
             switch (yesOrNo)
             {
                 case "Yes":
-                    inventory.Ice = inventory.Ice + numberLemons;
+                    inventory.ice = inventory.ice + numberLemons;
                     inventory.money = inventory.money - (numberIce * .15);
                     Console.WriteLine("You have purchased {0} lemons", numberIce);
-                    inventory.ShowCash();
+                    inventory.MoneyBalance();
                     break;
                 case "No":
                     BuyIce();
@@ -163,7 +163,13 @@ namespace LemonadeStand
 
         public int PriceLemonade()
         {
-
+            {
+                Console.WriteLine("How much would you like to sell your lemonade for?");
+                price = int.Parse(Console.ReadLine());
+                PriceLemonade();
+                
+            }
+            return price;
 
 
         }
@@ -172,16 +178,7 @@ namespace LemonadeStand
 
     }
 
-   
-
-
-
-        public EnoughMoney()
-        {
-
-        }
-
-    }
+ 
 
 
 
