@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Customer
+    public class Wallet
     {
+        public double budget = 20;
     }
 }

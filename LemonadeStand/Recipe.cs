@@ -33,7 +33,7 @@ namespace LemonadeStand
 
 
                 case "check":
-                    player.inventory.DisplayInventory();
+                    name.inventory.DisplayInventory();
                     StartRecipe(player);
                     break;
 
@@ -52,7 +52,7 @@ namespace LemonadeStand
         }
         public bool CheckLemonInventory()
         {
-            if (player.inventory.lemons[0].Count < lemon)
+            if (name.inventory.lemons[0].Count < lemon)
             {
                 Console.WriteLine("You don't have enough lemons");
                 PickLemons();

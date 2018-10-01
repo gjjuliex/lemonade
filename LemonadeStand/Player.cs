@@ -8,12 +8,21 @@ namespace LemonadeStand
 {
     public class Player
     {
-        public string player;
-
-        public Player()
+        public string name;
+        public Player ()
         {
+            name = GetName();
+        }
+
+        public string GetName()
+        {
+            Console.WriteLine("Enter Name");
+            name = Console.ReadLine();
+            return name;
 
         }
+
+        public Recipe recipe;
 
     }
 }

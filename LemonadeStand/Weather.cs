@@ -8,7 +8,7 @@ namespace LemonadeStand
 {
     public class Weather
     {
-        public string temperature;
+        public int temperature;
         public string condition;
 
 
@@ -34,7 +34,8 @@ namespace LemonadeStand
                     this.temperature = rand.Next(71, 95);
                     break;
                 case 4:
-                    this.temperature = rand.Next(96, 111);           
+                    this.temperature = rand.Next(96, 111);
+                    break;
             }
             return temperature;
         }

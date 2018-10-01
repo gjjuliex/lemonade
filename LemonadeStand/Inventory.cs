@@ -12,7 +12,7 @@ namespace LemonadeStand
         public int ice;
         public int sugar;
         public int cups;
-        public double budget = 20;
+       
      
    
 
@@ -21,7 +21,7 @@ namespace LemonadeStand
 
         }
 
-        public void SubtractInventory()
+       /* public void SubtractInventory()
         {
             lemon = lemon - 2;
             ice = ice - 2;
@@ -29,7 +29,7 @@ namespace LemonadeStand
             cups = cups - 1;
             return SubtractInventory;
 
-        }
+        } */
 
   
         public void ShowInventory()
