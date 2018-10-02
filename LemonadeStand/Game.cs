@@ -16,6 +16,7 @@ namespace LemonadeStand
         Weather weather = new Weather();
         public Recipe recipe;
         public Random rand;
+        public Days currentDay;
 
         public Game()
         {
@@ -23,6 +24,7 @@ namespace LemonadeStand
             store = new Store();
             recipe = new Recipe();
             rand = new Random();
+            currentDay = new Days();
 
         }
         
@@ -32,6 +34,8 @@ namespace LemonadeStand
         }
         public void runGame()
         {
+            currentDay.DisplayDay();
+            player.inventory.DisplayIvente
            
         }
             

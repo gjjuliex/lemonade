@@ -22,7 +22,7 @@ namespace LemonadeStand
 
         }
   
-        public void ShowInventory()
+        public void DisplayInventory()
         {
             Console.WriteLine("You have {0} lemons, {1} cups, {2} cups of sugar, {3} bags of ice!", lemon, cups, sugar, ice);
 

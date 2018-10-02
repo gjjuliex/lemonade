@@ -20,7 +20,7 @@ namespace LemonadeStand
 
         }
 
-        public void StartRecipe(Player player)
+        public void StartRecipe(Player name)
         {
             Console.WriteLine("Time to make Lemonade!");
             Console.WriteLine("How would you like to begin?");
@@ -30,11 +30,13 @@ namespace LemonadeStand
             switch (userInput)
             {
                 case "start":
+                    lemon = PickLemons();
+                    CheckLemonInventory(name, lemon);
 
 
                 case "check":
                     name.inventory.DisplayInventory();
-                    StartRecipe(player);
+                    StartRecipe(name);
                     break;
 
                 case "shop":
@@ -58,7 +60,7 @@ namespace LemonadeStand
         }
         public bool CheckLemonInventory()
         {
-            if (name.inventory.lemons[0].Count < lemon)
+            if (Player.inventory.lemons[0].Count < lemon)
             {
                 Console.WriteLine("You don't have enough lemons");
                 PickLemons();
@@ -74,7 +76,7 @@ namespace LemonadeStand
         }
         public bool CheckSugar()
         {
-            if (player.inventory.sugar[0].Count < sugar)
+            if (name.inventory.sugar[0].Count < sugar)
             {
                 Console.WriteLine("You don't have enough sugar");
                 PickSugar();
@@ -91,7 +93,7 @@ namespace LemonadeStand
         
         public bool CheckIce()
         {
-            if (Player.inventory.ice[0].Count < ice)
+            if (name.inventory.ice[0].Count < ice)
             {
                 Console.WriteLine("Uh oh, you don't have enough ice!");
                 PickIce();
@@ -106,9 +108,18 @@ namespace LemonadeStand
             return cup;
         }
 
+        public void RemoveLemons (Player player, int lemon)
+        {
+            for (int i = 0; i < lemon; i++)
+                name.inventory.supplies[i].RemoveAt;}
+            )
+
+        }
+
+
         public bool CheckCup()
         {
-            if (player.inventory.cup[0].Count < cup)
+            if (name.inventory.cup[0].Count < cup)
             {
                 Console.WriteLine("You ran out of cups, how are you going to hold your lemonade now? :(");
                 PickCup();

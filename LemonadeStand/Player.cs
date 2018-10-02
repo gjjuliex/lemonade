@@ -9,9 +9,11 @@ namespace LemonadeStand
     public class Player
     {
         public string name;
+        public Inventory inventory;
         public Player ()
         {
             name = GetName();
+            inventory = new Inventory();
         }
 
         public string GetName()
